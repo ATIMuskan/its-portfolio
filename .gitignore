@@ -1,3 +1,16 @@
+# Ignore JS build files in build or dist folders only
+/dist/**/*.js
+/dist/**/*.mjs
+/build/**/*.js
+/build/**/*.mjs
+
+# Ignore source maps in those folders
+/dist/**/*.map
+/build/**/*.map
+
+# Ignore esbuild executable if present anywhere
+esbuild.exe
+
 # Logs
 logs
 *.log
