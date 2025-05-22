@@ -1,4 +1,4 @@
-/* Navbar Styles */
+/* --- GENERAL STYLES --- */
 .navbar {
   position: sticky;
   top: 0;
@@ -10,7 +10,7 @@
 }
 
 .navbar.scrolled {
-  background-color: #222; /* Darker color when scrolled */
+  background-color: #222;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -29,7 +29,6 @@
   color: #fff;
   display: flex;
   align-items: center;
-  transition: color 0.3s ease;
 }
 
 .logo-link {
@@ -42,24 +41,11 @@
 .logo-tech {
   font-size: 2.2rem;
   font-weight: bold;
-  color: #00b894; /* Tech color */
+  color: #00b894;
   margin-right: 5px;
 }
 
-.logo-link:hover .logo-tech {
-  color: #e74c3c; /* Highlight color on hover */
-}
-
-.menu-icon {
-  display: none;
-  cursor: pointer;
-}
-
-.icon-menu, .icon-close {
-  font-size: 2rem;
-  color: #fff;
-}
-
+/* --- NAVBAR LINKS --- */
 .navbar-links {
   display: flex;
   gap: 2rem;
@@ -81,38 +67,39 @@
   border-bottom: 2px solid #00b894;
 }
 
-/* Responsive Styles */
+/* --- BURGER ICON STYLES --- */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* --- RESPONSIVE --- */
 @media screen and (max-width: 768px) {
-  .navbar-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    padding: 1rem;
-    transition: transform 0.3s ease;
-    transform: translateY(-100%);
-  }
-
-  .navbar-links.active {
-    transform: translateY(0);
-  }
-
   .menu-icon {
     display: block;
   }
 
-  .icon-close {
-    font-size: 2rem;
-    color: #fff;
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 0 2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    list-style-type: none;
   }
 
-  .icon-menu {
-    font-size: 2rem;
-    color: #fff;
+  /* Only apply column layout when active */
+  .navbar-links.active {
+    flex-direction: column;
+    padding: 1rem 2rem;
+    max-height: 500px;
   }
 }
 

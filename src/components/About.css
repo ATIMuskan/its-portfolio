@@ -78,4 +78,36 @@
     color: #6c63ff;
     font-size: 1.1rem;
   }
+  .resume-button-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .resume-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center; /* center align */
+  }
+  
+  .resume-button {
+    padding: 12px 24px;
+    background-color: #007bff; /* blue color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .resume-button:hover {
+    background-color: #0056b3; /* darker blue on hover */
+    transform: translateY(-3px); /* slight lift on hover */
+  }
+  
+  .resume-button:active {
+    transform: translateY(0px); /* back to normal when clicked */
+  }
   

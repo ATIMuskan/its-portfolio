@@ -1,0 +1,30 @@
+.footer {
+    background-color: #031332;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    color: #6c63ff;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons i {
+    margin-right: 8px;
+  }
+  

@@ -1,68 +1,150 @@
-/* Add this to src/index.css or App.css */
-
-/* Swiper navigation buttons */
-.swiper-button-prev,
-.swiper-button-next {
-  color: #fff;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 1rem;
-  border-radius: 9999px; /* Fully rounded */
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+*{
+  box-sizing: border-box;
+  margin: 2;
+  padding: 0;
+}
+.projects-section {
+  padding: 80px 0;
+  background-color: #f7f7f7;
 }
 
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  background: rgba(255, 255, 255, 0.7);
-  color: #111827; /* Darker text on hover */
-  transform: scale(1.15);
+.projects-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
 }
 
-/* Swiper pagination bullets */
-.swiper-pagination-bullet {
-  background: #fff;
-  opacity: 0.6;
-  width: 10px;
-  height: 10px;
-  transition: all 0.3s ease;
-  margin: 0 4px !important;
+.projects-heading {
+  text-align: center;
+  margin-bottom: 32px;
 }
 
-.swiper-pagination-bullet:hover {
-  opacity: 1;
+.projects-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #4f46e5;
+  animation: pulse 2s infinite;
 }
 
-.swiper-pagination-bullet-active {
-  background: #9333ea; /* Purple-600 */
-  opacity: 1;
-  transform: scale(1.2);
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
 }
 
-/* Fade-in animation for project section */
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s forwards;
+.projects-swiper {
+  padding: 16px;
 }
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+.project-slide {
+  background: linear-gradient(to right, #9333ea, #ec4899, #ef4444);
+  border-radius: 30px;
+  padding: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 32px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .project-card {
+    flex-direction: row;
+    align-items: center;
   }
 }
 
-/* Optional: Smooth scrolling for whole site */
-html {
-  scroll-behavior: smooth;
+.featured-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: #facc15;
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  animation: bounce 1.5s infinite;
 }
 
-/* Bonus: Button hover effect */
-.button-glow {
-  transition: all 0.3s ease-in-out;
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
-.button-glow:hover {
-  box-shadow: 0 0 15px rgba(147, 51, 234, 0.6);
-  transform: translateY(-3px) scale(1.05);
+.project-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.05);
+}
+
+.project-content {
+  flex: 1;
+  padding: 0 16px;
+}
+
+.project-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.project-tech {
+  color: #4f46e5;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.project-desc {
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+.project-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.code-btn {
+  background-color: #1f2937;
+  color: #fff;
+}
+
+.code-btn:hover {
+  background-color: #111827;
+  transform: scale(1.05);
+}
+
+.demo-btn {
+  background-color: #4f46e5;
+  color: #fff;
+}
+
+.demo-btn:hover {
+  background-color: #4338ca;
+  transform: scale(1.05);
 }

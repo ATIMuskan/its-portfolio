@@ -21,6 +21,12 @@
     line-height: 1.2;
   }
   
+  .social-icons{
+     color: #6c63ff;
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
   .highlight {
     color: #6c63ff;
   }

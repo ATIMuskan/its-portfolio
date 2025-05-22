@@ -1,5 +1,3 @@
-// src/components/Projects.jsx
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -7,13 +5,14 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 import { Github, ExternalLink } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import './Projects.css';
 
 function Projects() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     let start = 0;
-    const end = 10; // Adjust this number based on your project count
+    const end = 10;
     const timer = setInterval(() => {
       start += 1;
       setCount(start);
@@ -23,105 +22,104 @@ function Projects() {
   }, []);
 
   const projects = [
-    {
-      title: "Portfolio Website",
-      tech: "ReactJS, CSS, Animations",
-      description: "I created a stunning personal portfolio using ReactJS with smooth animations and responsive design.",
-      image: "/images/portfolio.png",
-      github: "https://github.com/Muskan-23/portfolio-website", // Replace with your actual GitHub repo
-      demo: "https://your-portfolio-live-link.com",
-      featured: true,
-    },
-    {
-      title: "Blog Platform",
-      tech: "Node.js, MongoDB, Express",
-      description: "A full-stack blog platform where users can register, log in, write articles, and comment.",
-      image: "/images/blog.png",
-      github: "https://github.com/Muskan-23/blog-platform", // Replace with your actual GitHub repo
-      demo: "https://your-blog-live-link.com",
-      featured: false,
-    },
-    {
-      title: "E-commerce Site",
-      tech: "ReactJS, Stripe, Firebase",
-      description: "Developed a fully functional e-commerce site where users can browse products, add to cart, and checkout.",
-      image: "/images/ecommerce.png",
-      github: "https://github.com/Muskan-23/ecommerce-site", // Replace with your actual GitHub repo
-      demo: "https://your-ecommerce-live-link.com",
-      featured: false,
-    },
-    {
-      title: "Weather App",
-      tech: "React, OpenWeather API",
-      description: "Built a weather app fetching live weather updates using OpenWeatherMap API.",
-      image: "/images/weather.png",
-      github: "https://github.com/Muskan-23/weather-app", // Replace with your actual GitHub repo
-      demo: "https://your-weather-live-link.com",
-      featured: false,
-    },
-    {
-      title: "Task Manager",
-      tech: "MERN Stack",
-      description: "A full-stack task manager app with user authentication, CRUD operations, and beautiful UI.",
-      image: "/images/taskmanager.png",
-      github: "https://github.com/Muskan-23/task-manager", // Replace with your actual GitHub repo
-      demo: "https://your-taskmanager-live-link.com",
-      featured: true,
-    },
-    {
-      title: "Chat App",
-      tech: "Socket.IO, Node.js",
-      description: "Real-time chat application with WebSockets and authentication.",
-      image: "/images/chat.png",
-      github: "https://github.com/Muskan-23/chat-app", // Replace with your actual GitHub repo
-      demo: "https://your-chat-live-link.com",
-      featured: false,
-    },
-    {
-      title: "Expense Tracker",
-      tech: "ReactJS, LocalStorage",
-      description: "Track your expenses and income with a beautiful frontend and persistent storage.",
-      image: "/images/expense.png",
-      github: "https://github.com/Muskan-23/expense-tracker", // Replace with your actual GitHub repo
-      demo: "https://your-expense-live-link.com",
-      featured: false,
-    },
-    {
-      title: "Food Delivery UI",
-      tech: "HTML, CSS, JS",
-      description: "Designed a modern UI for a food delivery app with smooth animations.",
-      image: "/images/food.png",
-      github: "https://github.com/Muskan-23/food-delivery", // Replace with your actual GitHub repo
-      demo: "https://your-food-live-link.com",
-      featured: false,
-    },
-    {
-      title: "AI Image Generator",
-      tech: "React, DALL-E API",
-      description: "Create stunning AI-generated images using DALL-E API integration.",
-      image: "/images/ai.png",
-      github: "https://github.com/Muskan-23/ai-generator", // Replace with your actual GitHub repo
-      demo: "https://your-ai-live-link.com",
-      featured: true,
-    },
-    {
-      title: "Landing Page",
-      tech: "Next.js, TailwindCSS",
-      description: "Built a clean and SEO-optimized landing page with Next.js and Tailwind.",
-      image: "/images/landing.png",
-      github: "https://github.com/Muskan-23/landing-page", // Replace with your actual GitHub repo
-      demo: "https://your-landing-live-link.com",
-      featured: false,
-    },
-  ];
+  {
+    title: "Portfolio Website",
+    tech: "ReactJS, CSS, Animations",
+    description: "A responsive and animated personal portfolio website showcasing my skills, experience, and projects, built with ReactJS and modern CSS.",
+    image: "/images/portfolio.png",
+    github: "https://github.com/ATIMuskan/portfolio-website/",
+    demo: "https://beamish-lollipop-2355c0.netlify.app/",
+    featured: true,
+  },
+  {
+    title: "Blog Platform",
+    tech: "Node.js, MongoDB, Express",
+    description: "A full-stack blogging application that allows users to register, log in, create articles, and comment on posts. Built using the MERN stack.",
+    image: "/images/blog.png",
+    github: "https://github.com/ATIMuskan",
+    demo: "https://github.com/ATIMuskan",
+    featured: false,
+  },
+  {
+    title: "E-commerce Site",
+    tech: "ReactJS, Stripe, Firebase",
+    description: "An end-to-end e-commerce web application with user authentication, product browsing, cart management, and secure Stripe payments.",
+    image: "/images/ecommerce.png",
+    github: "https://github.com/ATIMuskan/linkinsighter",
+    demo: "https://github.com/ATIMuskan/linkinsighter",
+    featured: false,
+  },
+  {
+    title: "Weather App",
+    tech: "React, OpenWeather API",
+    description: "A sleek and intuitive weather application that provides real-time weather forecasts and conditions using the OpenWeatherMap API.",
+    image: "/images/weather.png",
+    github: "https://github.com/ATIMuskan/",
+    demo: "https://github.com/ATIMuskan/",
+    featured: false,
+  },
+  {
+    title: "Task Manager",
+    tech: "MERN Stack",
+    description: "A task management application where users can create, edit, and delete tasks, with full authentication and a clean, modern UI.",
+    image: "/images/taskmanager.png",
+    github: "https://github.com/ATIMuskan/",
+    demo: "https://github.com/ATIMuskan/",
+    featured: true,
+  },
+  {
+    title: "Chat App",
+    tech: "Socket.IO, Node.js",
+    description: "A real-time chat application that allows multiple users to join chat rooms and communicate using WebSockets with user authentication.",
+    image: "/images/chat.png",
+    github: "https://github.com/ATIMuskan/",
+    demo: "https://github.com/ATIMuskan/",
+    featured: false,
+  },
+  {
+    title: "Expense Tracker",
+    tech: "ReactJS, LocalStorage",
+    description: "A personal finance tracker to monitor income and expenses with dynamic charts and persistent data storage via LocalStorage.",
+    image: "/images/expense.png",
+    github: "https://github.com/ATIMuskan/",
+    demo: "https://github.com/ATIMuskan/",
+    featured: false,
+  },
+  {
+    title: "Food Delivery UI",
+    tech: "HTML, CSS, JS",
+    description: "A visually appealing and interactive front-end prototype for a food delivery app, focusing on animations and responsive design.",
+    image: "/images/food.png",
+    github: "https://github.com/Muskan-23/food-delivery",
+    demo: "https://your-food-live-link.com",
+    featured: false,
+  },
+  {
+    title: "Backend CRUD Based",
+    tech: "JavaScript, Express, MongoDB, Node.js",
+    description: "A robust RESTful API enabling CRUD operations on employee records, built using Express.js and MongoDB with modular routes.",
+    image: "/images/ai.png",
+    github: "https://github.com/ATIMuskan/EmployeeAPI",
+    demo: "https://github.com/ATIMuskan/EmployeeAPI",
+    featured: true,
+  },
+  {
+    title: "Web Portal",
+    tech: "Next.js, TailwindCSS",
+    description: "A fast-loading and SEO-friendly web portal featuring smooth scrolling, section navigation, and responsive layout built with Next.js.",
+    image: "/images/landing.png",
+    github: "https://github.com/ATIMuskan/web-portal",
+    demo: "https://github.com/ATIMuskan/web-portal",
+    featured: false,
+  },
+];
+
 
   return (
-    <section className="py-20 bg-gray-100" id="projects">
-      <div className="max-w-6xl mx-auto px-6">
-        
-        {/* 🚀 Animated Project Counter */}
-        <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-indigo-600 animate-pulse">
+    <section className="projects-section" id="projects">
+      <div className="projects-container">
+        <div className="projects-heading">
+          <h2 className="projects-title">
             🚀 {count}+ Projects Completed
           </h2>
         </div>
@@ -132,48 +130,31 @@ function Projects() {
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
-          className="rounded-2xl overflow-hidden p-2"
+          className="projects-swiper"
         >
           {projects.map((project, index) => (
             <SwiperSlide key={index}>
-              <div className="relative p-1 rounded-3xl bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] transition-all duration-500">
-                <div className="flex flex-col md:flex-row items-center gap-10 bg-white rounded-3xl p-8 shadow-2xl backdrop-blur-md relative">
-                  
-                  {/* 🔥 Featured Badge */}
+              <div className="project-slide">
+                <div className="project-card">
                   {project.featured && (
-                    <div className="absolute top-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold animate-bounce">
-                      🔥 Featured
-                    </div>
+                    <div className="featured-badge">🔥 Featured</div>
                   )}
-
                   <img 
                     src={project.image} 
                     alt={project.title} 
-                    className="w-full md:w-1/2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+                    className="project-image"
                   />
-                  <div className="w-full md:w-1/2">
-                    <h3 className="text-3xl font-semibold mb-4">{project.title}</h3>
-                    <p className="text-indigo-600 font-medium mb-2">{project.tech}</p>
-                    <p className="text-gray-700 mb-6">{project.description}</p>
-                    <div className="flex flex-wrap gap-4">
-                      
-                      {/* Buttons with Icons */}
-                      <a 
-                        href={project.github} 
-                        target="_blank" 
-                        className="flex items-center gap-2 bg-gray-800 text-white px-5 py-2 rounded-full hover:scale-105 hover:bg-gray-900 transition-all duration-300"
-                      >
+                  <div className="project-content">
+                    <h3 className="project-title">{project.title}</h3>
+                    <p className="project-tech">{project.tech}</p>
+                    <p className="project-desc">{project.description}</p>
+                    <div className="project-buttons">
+                      <a href={project.github} target="_blank" className="btn code-btn">
                         <Github size={20} /> View Code
                       </a>
-
-                      <a 
-                        href={project.demo} 
-                        target="_blank" 
-                        className="flex items-center gap-2 bg-indigo-600 text-white px-5 py-2 rounded-full hover:scale-105 hover:bg-indigo-700 transition-all duration-300"
-                      >
+                      <a href={project.demo} target="_blank" className="btn demo-btn">
                         <ExternalLink size={20} /> Live Demo
                       </a>
-
                     </div>
                   </div>
                 </div>

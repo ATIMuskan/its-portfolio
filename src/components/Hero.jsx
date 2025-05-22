@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.css";
 import { TypeAnimation } from "react-type-animation";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin ,FaInstagram  } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
@@ -15,7 +15,7 @@ function Hero() {
 
   return (
     <section className="hero" id="hero">
-      {/* Background Particles */}
+     
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -63,7 +63,7 @@ function Hero() {
           I'm passionate about crafting beautiful and user-friendly digital experiences. Always curious, always learning.
         </motion.p>
 
-        {/* Social Media Icons */}
+       
         <motion.div
           className="social-icons"
           initial={{ opacity: 0 }}
@@ -73,12 +73,15 @@ function Hero() {
           <a href="https://github.com/ATIMuskan" target="_blank" rel="noopener noreferrer">
             <FaGithub size={28} />
           </a>
-          <a href="www.linkedin.com/in/muskan-shrivas-757091233" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/muskan-shrivas-757091233/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={28} />
           </a>
+          <a href="https://www.instagram.com/epicure.amare/" target="_blank" rel="noopener noreferrer">
+  <FaInstagram size={28} />
+</a>
         </motion.div>
 
-        {/* Hero Buttons */}
+       
         <motion.div
           className="hero-buttons"
           initial={{ opacity: 0 }}
@@ -90,7 +93,7 @@ function Hero() {
         </motion.div>
       </div>
 
-      {/* Hero Image */}
+     
       <motion.div
         className="hero-image"
         initial={{ scale: 0 }}
@@ -100,7 +103,7 @@ function Hero() {
         <img src={heroImage} alt="Muskan - Developer" />
       </motion.div>
 
-      {/* Scroll Down Arrow */}
+      
       <div className="scroll-down">
         <a href="#projects">
           ↓

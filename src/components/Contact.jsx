@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import './Contact.css'; // Assuming you have a separate CSS file for styles
+import './Contact.css'; // Make sure this file exists and is styled
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function Contact() {
-  // State to hold form input values
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
 
-  // Handle input change
+  // Handle form input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -18,24 +19,31 @@ function Contact() {
     }));
   };
 
-  // Handle form submit
-  const handleSubmit = (e) => {
+  // Submit form and send data to backend
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Here, you would save the data, like sending it to a server or saving in local storage.
-    console.log('User Data:', formData);
+    try {
+      const response = await fetch('http://localhost:5000/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // After submission, reset the form
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
+      const result = await response.json();
 
-    // Optional: Show a success message or animation
-    alert('Thank you for reaching out! We will get back to you soon.');
-
-    // Additional code to handle form submission (like sending an email or saving to a database) can be added here.
+      if (result.success) {
+        alert('Thank you! Your message has been sent.');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert('Failed to send message. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Something went wrong. Please try again later.');
+    }
   };
 
   return (
@@ -43,7 +51,6 @@ function Contact() {
       <div className="contact-container">
         <h2 className="contact-title">Get in Touch</h2>
         <form onSubmit={handleSubmit} className="contact-form">
-          {/* Name Input */}
           <div className="input-group">
             <label htmlFor="name">Your Name</label>
             <input
@@ -56,7 +63,6 @@ function Contact() {
             />
           </div>
 
-          {/* Email Input */}
           <div className="input-group">
             <label htmlFor="email">Your Email</label>
             <input
@@ -69,7 +75,6 @@ function Contact() {
             />
           </div>
 
-          {/* Message Input */}
           <div className="input-group">
             <label htmlFor="message">Your Message</label>
             <textarea
@@ -81,7 +86,6 @@ function Contact() {
             />
           </div>
 
-          {/* Submit Button */}
           <button type="submit" className="submit-button">
             Send Message
           </button>

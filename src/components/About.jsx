@@ -35,11 +35,20 @@ function About() {
         I enjoy working with <strong>React</strong>, <strong>Node.js</strong>, and solving complex problems elegantly.
       </p>
 
+      {/* Resume Button */}
+      <div className="resume-buttons">
+  
+  <a href="/MUSKAN.pdf" download>
+    <button className="resume-button">Download Resume</button>
+  </a>
+</div>
+
+
       {/* Counters */}
       <div className="about-counters">
         <div className="counter">
           <h3><span id="internships">0</span>+</h3>
-          <p>Internships (2 Online, 1 Offline)</p>
+          <p>Internships ( 2 Online + 1 Offline )</p>
         </div>
         <div className="counter">
           <h3><span id="projects">0</span>+</h3>
